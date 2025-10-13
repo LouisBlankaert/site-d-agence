@@ -195,10 +195,10 @@ export default function ContactSection() {
                   className="w-full px-3 py-2 text-sm rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary/50"
                   required
                 >
-                  <option value="">Sélectionnez un sujet</option>
-                  <option value="Landing Page">Landing Page - 299€</option>
-                  <option value="Site Web Complet">Site Web Complet - 699€</option>
-                  <option value="Application Web">Application Web - 999€</option>
+                  <option value="">Sélectionnez un service</option>
+                  <option value="Site Web Complet">Site Web Complet - 990€</option>
+                  <option value="Landing Page">Landing Page - 590€</option>
+                  <option value="Application Web">Application Web - 1990€</option>
                   <option value="Autre">Autre demande</option>
                 </select>
               </div>

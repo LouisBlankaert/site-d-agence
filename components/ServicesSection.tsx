@@ -145,7 +145,7 @@ export default function ServicesSection() {
               
               <div className="mt-auto">
                 <button 
-                  className={`apple-button w-full bg-primary text-primary-foreground rounded-full font-medium transition-all hover:bg-primary/90 hover:shadow-lg hover:scale-105 hover:shadow-primary/20 active:scale-95 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:ring-offset-2`}
+                  className={`apple-button w-full bg-primary text-primary-foreground rounded-full font-medium transition-all hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:ring-offset-2`}
                   onClick={() => handleCommandClick(service.title)}
                 >
                   {service.popular ? 'Profiter de l\'offre' : 'Commander'}

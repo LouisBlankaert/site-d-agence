@@ -39,10 +39,29 @@
   text-decoration: none;
 }
 
+/* Effet néon léger par défaut */
+.apple-button {
+  box-shadow: 0 0 5px rgba(0, 113, 227, 0.2);
+  transition: all 0.3s ease;
+}
+
+/* Effet néon plus prononcé au survol */
 .apple-button:hover {
   background-color: var(--primary-hover);
   transform: translateY(-1px);
-  box-shadow: 0 4px 10px rgba(0, 113, 227, 0.2);
+  box-shadow: 0 0 15px rgba(0, 113, 227, 0.5), 0 0 5px rgba(0, 113, 227, 0.3);
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+/* Effet néon léger par défaut pour le mode sombre */
+.dark .apple-button {
+  box-shadow: 0 0 8px rgba(0, 113, 227, 0.3), 0 0 3px rgba(0, 113, 227, 0.2);
+}
+
+/* Effet néon plus prononcé au survol pour le mode sombre */
+.dark .apple-button:hover {
+  box-shadow: 0 0 20px rgba(0, 113, 227, 0.7), 0 0 10px rgba(0, 113, 227, 0.5);
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
 }
 
 .apple-button:active {
@@ -72,6 +91,46 @@
 
 .card:hover {
   transform: translateY(-5px);
+}
+
+/* Effet néon léger pour les cartes par défaut */
+.card {
+  box-shadow: 0 2px 5px rgba(0, 113, 227, 0.05);
+}
+
+/* Effet néon léger pour les cartes en mode sombre */
+.dark .card {
+  box-shadow: 0 2px 8px rgba(0, 113, 227, 0.1), 0 0 3px rgba(0, 113, 227, 0.05);
+}
+
+/* Effet néon plus prononcé pour les cartes au survol */
+.card:hover {
+  box-shadow: 0 5px 15px rgba(0, 113, 227, 0.15), 0 0 5px rgba(0, 113, 227, 0.1);
+}
+
+/* Effet néon plus prononcé pour les cartes en mode sombre au survol */
+.dark .card:hover {
+  box-shadow: 0 5px 20px rgba(0, 113, 227, 0.3), 0 0 8px rgba(0, 113, 227, 0.2);
+}
+
+/* Effet néon léger pour la carte populaire par défaut */
+.card.border-primary {
+  box-shadow: 0 3px 10px rgba(0, 113, 227, 0.1), 0 0 5px rgba(0, 113, 227, 0.05);
+}
+
+/* Effet néon léger pour la carte populaire en mode sombre */
+.dark .card.border-primary {
+  box-shadow: 0 3px 12px rgba(0, 113, 227, 0.15), 0 0 6px rgba(0, 113, 227, 0.1);
+}
+
+/* Effet néon plus prononcé pour la carte populaire au survol */
+.card.border-primary:hover {
+  box-shadow: 0 8px 25px rgba(0, 113, 227, 0.25), 0 0 10px rgba(0, 113, 227, 0.15);
+}
+
+/* Effet néon plus prononcé pour la carte populaire en mode sombre au survol */
+.dark .card.border-primary:hover {
+  box-shadow: 0 8px 30px rgba(0, 113, 227, 0.4), 0 0 15px rgba(0, 113, 227, 0.25);
 }
 
 .card-title {
@@ -130,5 +189,30 @@ section {
   border: 2px solid white;
   z-index: 40;
   white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
+/* Effet néon léger pour le badge par défaut */
+.popular-badge {
+  box-shadow: 0 0 5px rgba(0, 113, 227, 0.3), 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+/* Effet néon léger pour le badge en mode sombre */
+.dark .popular-badge {
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 0 0 8px rgba(0, 113, 227, 0.4), 0 0 3px rgba(0, 113, 227, 0.3);
+  text-shadow: 0 0 3px rgba(255, 255, 255, 0.3);
+}
+
+/* Effet néon plus prononcé pour le badge au survol */
+.card:hover .popular-badge {
+  box-shadow: 0 0 12px rgba(0, 113, 227, 0.5), 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Effet néon plus prononcé pour le badge en mode sombre au survol */
+.dark .card:hover .popular-badge {
+  box-shadow: 0 0 15px rgba(0, 113, 227, 0.6), 0 0 5px rgba(0, 113, 227, 0.4);
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
 }
 

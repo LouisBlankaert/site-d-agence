@@ -1,0 +1,134 @@
+/* Styles inspirés d'Apple */
+
+/* Variables */
+:root {
+  --primary: #0071e3;
+  --primary-hover: #0077ed;
+  --secondary: #f5f5f7;
+  --foreground: #1d1d1f;
+  --background: #ffffff;
+  --border: #d2d2d7;
+  --radius: 12px;
+}
+
+/* Styles de base */
+.apple-section {
+  padding: 5rem 1rem;
+}
+
+@media (max-width: 768px) {
+  .apple-section {
+    padding: 3rem 1rem;
+  }
+}
+
+/* Bouton style Apple */
+.apple-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary);
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.6rem 1.2rem;
+  border-radius: 100px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.apple-button:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0, 113, 227, 0.2);
+}
+
+.apple-button:active {
+  transform: translateY(0);
+}
+
+/* Animations */
+.fade-in {
+  animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Styles pour les cartes */
+.card {
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.card-text {
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}
+
+.feature-text {
+  font-size: 0.875rem;
+}
+
+.price {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* Effet de mise à l'échelle */
+.scale-103 {
+  transform: scale(1.03);
+}
+
+/* Amélioration des espaces */
+section {
+  margin-bottom: 2rem;
+}
+
+/* Animation de surbrillance pour le formulaire */
+@keyframes highlightForm {
+  0% { box-shadow: 0 0 0 0 rgba(0, 113, 227, 0); }
+  50% { box-shadow: 0 0 0 8px rgba(0, 113, 227, 0.3); }
+  100% { box-shadow: 0 0 0 0 rgba(0, 113, 227, 0); }
+}
+
+.highlight-form {
+  animation: highlightForm 1s ease-out;
+}
+
+/* Style pour le badge populaire */
+.popular-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--primary);
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.375rem 1rem;
+  border-radius: 100px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  border: 2px solid white;
+  z-index: 40;
+  white-space: nowrap;
+}
+

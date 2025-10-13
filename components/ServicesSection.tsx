@@ -1,7 +1,7 @@
 "use client";
 
-import Image from "next/image";
-import { useRouter } from "next/navigation";
+// import Image from "next/image";
+// import { useRouter } from "next/navigation";
 
 const services = [
   {
@@ -68,7 +68,7 @@ const services = [
 ];
 
 export default function ServicesSection() {
-  const router = useRouter();
+  // const router = useRouter();
   
   const handleCommandClick = (serviceTitle: string) => {
     // Mettre à jour l'URL avec le service sélectionné

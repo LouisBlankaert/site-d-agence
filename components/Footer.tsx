@@ -9,9 +9,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
             <h3 className="text-lg font-medium mb-4">AgenceWeb</h3>
-            <p className="text-foreground/70 mb-4 text-sm">
-              Nous créons des sites web modernes et élégants qui captent l'attention et convertissent les visiteurs en clients.
-            </p>
+            <p className="text-sm text-foreground/70 mb-4">Nous sommes une agence web passionnée par la création d&apos;expériences numériques exceptionnelles.</p>
             <div className="flex space-x-4">
               <a 
                 href="#" 
@@ -145,7 +143,7 @@ export default function Footer() {
               Politique de confidentialité
             </Link>
             <Link href="#" className="text-foreground/70 hover:text-primary transition-colors text-sm">
-              Conditions d'utilisation
+              Conditions d&apos;utilisation
             </Link>
           </div>
         </div>

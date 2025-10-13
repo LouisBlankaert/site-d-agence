@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+// import Image from "next/image";
 
 export default function HeroSection() {
   return (
@@ -12,7 +12,7 @@ export default function HeroSection() {
               <span className="text-primary">élégance</span>
             </h1>
             <p className="text-foreground/80 max-w-xl">
-              Nous concevons et développons des sites web modernes qui captent l'attention et convertissent les visiteurs en clients.
+              Nous concevons et développons des sites web modernes qui captent l&apos;attention et convertissent les visiteurs en clients.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Link href="#services" className="apple-button text-center text-sm">

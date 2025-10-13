@@ -62,7 +62,7 @@ export default function ContactSection() {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
-  const [submitError, setSubmitError] = useState("");
+  // const [submitError, setSubmitError] = useState("");
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -98,7 +98,7 @@ export default function ContactSection() {
           <div>
             <h2 className="text-2xl md:text-3xl font-medium mb-4">Contactez-nous</h2>
             <p className="text-foreground/70 mb-8 text-sm">
-              Vous avez un projet en tête ? N'hésitez pas à nous contacter pour discuter de vos besoins et de comment nous pouvons vous aider.
+              Vous avez un projet en tête ? N&apos;hésitez pas à nous contacter pour discuter de vos besoins et de comment nous pouvons vous aider.
             </p>
             
             <div className="space-y-6">
@@ -150,11 +150,7 @@ export default function ContactSection() {
               </div>
             ) : null}
             
-            {submitError ? (
-              <div className="bg-red-50 text-red-800 p-3 rounded-lg mb-5 text-sm">
-                {submitError}
-              </div>
-            ) : null}
+            {/* Message d'erreur désactivé pour le moment */}
             
             <form onSubmit={handleSubmit} className="space-y-3 contact-form">
               <div>

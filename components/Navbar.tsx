@@ -25,7 +25,7 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-background/80 backdrop-blur-md shadow-sm"
+          ? "bg-background/90 backdrop-blur-md shadow-md border-b border-primary/10"
           : "bg-transparent"
       }`}
     >
@@ -40,7 +40,7 @@ export default function Navbar() {
             <li>
               <Link
                 href="/"
-                className="text-sm text-foreground/80 hover:text-foreground transition-colors"
+                className="text-sm text-foreground/80 hover:text-primary transition-colors"
               >
                 Accueil
               </Link>
@@ -48,7 +48,7 @@ export default function Navbar() {
             <li>
               <Link
                 href="#services"
-                className="text-sm text-foreground/80 hover:text-foreground transition-colors"
+                className="text-sm text-foreground/80 hover:text-primary transition-colors"
               >
                 Services
               </Link>
@@ -56,7 +56,7 @@ export default function Navbar() {
             <li>
               <Link
                 href="#portfolio"
-                className="text-sm text-foreground/80 hover:text-foreground transition-colors"
+                className="text-sm text-foreground/80 hover:text-primary transition-colors"
               >
                 Portfolio
               </Link>
@@ -112,12 +112,12 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden bg-background/95 backdrop-blur-md absolute left-0 right-0 p-4 shadow-lg">
+          <div className="md:hidden bg-background/95 backdrop-blur-md absolute left-0 right-0 p-4 shadow-lg border-b border-primary/10 bg-gradient-to-b from-secondary/30 to-transparent">
             <ul className="flex flex-col space-y-4">
               <li>
                 <Link
                   href="/"
-                  className="block py-2 text-sm text-foreground/80 hover:text-foreground"
+                  className="block py-2 text-sm text-foreground/80 hover:text-primary"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Accueil
@@ -126,7 +126,7 @@ export default function Navbar() {
               <li>
                 <Link
                   href="#services"
-                  className="block py-2 text-sm text-foreground/80 hover:text-foreground"
+                  className="block py-2 text-sm text-foreground/80 hover:text-primary"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Services
@@ -135,7 +135,7 @@ export default function Navbar() {
               <li>
                 <Link
                   href="#portfolio"
-                  className="block py-2 text-sm text-foreground/80 hover:text-foreground"
+                  className="block py-2 text-sm text-foreground/80 hover:text-primary"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Portfolio

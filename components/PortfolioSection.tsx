@@ -34,11 +34,11 @@ const portfolioItems = [
 
 export default function PortfolioSection() {
   return (
-    <section id="portfolio" className="apple-section fade-in">
+    <section id="portfolio" className="apple-section bg-gradient-to-b from-primary/10 to-secondary/70 fade-in">
       <div className="container mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl font-medium mb-4">Notre Portfolio</h2>
-          <p className="text-foreground/70 card-text">
+          <p className="text-foreground/80 card-text">
             Découvrez quelques-uns de nos projets récents et comment nous avons aidé nos clients à atteindre leurs objectifs.
           </p>
         </div>
@@ -58,13 +58,13 @@ export default function PortfolioSection() {
               
               <div className="p-6">
                 <h3 className="card-title mb-2">{item.title}</h3>
-                <p className="text-foreground/70 mb-4 card-text">{item.description}</p>
+                <p className="text-foreground/80 mb-4 card-text">{item.description}</p>
                 
                 <div className="flex flex-wrap gap-2 mb-4">
                   {item.tags.map((tag, index) => (
                     <span 
                       key={index} 
-                      className="text-xs px-3 py-1 bg-background rounded-full text-foreground/70"
+                      className="text-xs px-3 py-1 bg-background rounded-full text-primary/80"
                     >
                       {tag}
                     </span>

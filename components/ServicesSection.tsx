@@ -86,11 +86,11 @@ export default function ServicesSection() {
   };
   
   return (
-    <section id="services" className="apple-section bg-secondary fade-in">
+    <section id="services" className="apple-section bg-gradient-to-b from-primary/10 to-secondary/70 fade-in">
       <div className="container mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl font-medium mb-4">Nos Services</h2>
-          <p className="text-foreground/70 card-text">
+          <p className="text-foreground/80 card-text">
             Nous proposons une gamme complète de services pour vous aider à créer et développer votre présence en ligne.
           </p>
         </div>
@@ -99,11 +99,11 @@ export default function ServicesSection() {
           {services.map((service) => (
             <div 
               key={service.id} 
-              className={`bg-background rounded-2xl p-8 shadow-sm border card ${service.popular ? 'border-primary shadow-md shadow-primary/5' : 'border-border/50'} transition-all hover:shadow-md hover:border-primary/20 flex flex-col h-full relative`}
+              className={`bg-background rounded-2xl p-8 shadow-sm border card ${service.popular ? 'border-primary shadow-md shadow-primary/5' : 'border-primary/20'} transition-all hover:shadow-md hover:border-primary/40 flex flex-col h-full relative`}
             >
               <div className="mb-6 text-primary">{service.icon}</div>
               <h3 className="card-title mb-3">{service.title}</h3>
-              <p className="text-foreground/70 mb-6 card-text">{service.description}</p>
+              <p className="text-foreground/80 mb-6 card-text">{service.description}</p>
               
               <div className="mb-4">
                 <div className="flex items-center gap-2">
@@ -111,7 +111,7 @@ export default function ServicesSection() {
                     {service.price}
                   </span>
                   {service.originalPrice && (
-                    <span className="text-sm text-foreground/60 line-through">
+                    <span className="text-sm text-primary/60 line-through">
                       {service.originalPrice}
                     </span>
                   )}

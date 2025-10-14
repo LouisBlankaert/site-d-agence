@@ -184,7 +184,7 @@ export default function HeroSection() {
               </Link>
               <Link 
                 href="#portfolio" 
-                className="rounded-full border border-primary/20 px-6 py-3 text-center text-sm font-medium transition-all hover:bg-primary/5"
+                className="rounded-full border-2 border-primary px-6 py-3 text-center text-sm font-medium transition-all hover:bg-primary/5 shadow-[0_0_10px_rgba(0,113,227,0.4)] hover:shadow-[0_0_15px_rgba(0,113,227,0.6)]"
               >
                 Voir notre portfolio
               </Link>

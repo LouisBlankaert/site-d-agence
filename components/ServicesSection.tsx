@@ -6,25 +6,6 @@
 const services = [
   {
     id: 1,
-    title: "Site Web Complet",
-    description: "Un site web multi-pages professionnel avec toutes les fonctionnalités essentielles pour présenter votre entreprise.",
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-10 h-10">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M6.75 7.5l3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0021 18V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v12a2.25 2.25 0 002.25 2.25z" />
-      </svg>
-    ),
-    price: "990€",
-    features: [
-      "Jusqu'à 5 pages",
-      "CMS intégré",
-      "Optimisation SEO avancée",
-      "Design personnalisé",
-      "Livraison en 14 jours",
-      "Hébergement offert pendant 1 an"
-    ]
-  },
-  {
-    id: 2,
     title: "Landing Page",
     description: "Une page web unique et optimisée pour convertir vos visiteurs en clients avec un design moderne et efficace.",
     icon: (
@@ -34,8 +15,8 @@ const services = [
     ),
     popular: true,
     badge: "OFFRE POPULAIRE",
-    price: "590€",
-    originalPrice: "790€",
+    price: "399€",
+    originalPrice: "549€",
     discount: "25% de réduction",
     features: [
       "Design responsive",
@@ -47,21 +28,21 @@ const services = [
     ]
   },
   {
-    id: 3,
-    title: "Application Web",
-    description: "Une application web sur mesure avec des fonctionnalités avancées pour répondre aux besoins spécifiques de votre entreprise.",
+    id: 2,
+    title: "Site Web Complet",
+    description: "Un site web multi-pages professionnel avec toutes les fonctionnalités essentielles pour présenter votre entreprise.",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-10 h-10">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M6.75 7.5l3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0021 18V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v12a2.25 2.25 0 002.25 2.25z" />
       </svg>
     ),
-    price: "1990€",
+    price: "899€",
     features: [
-      "Fonctionnalités personnalisées",
-      "Intégration d'API",
-      "Tableau de bord admin",
-      "Authentification utilisateurs",
-      "Livraison en 30 jours",
+      "Jusqu'à 5 pages",
+      "CMS intégré",
+      "Optimisation SEO avancée",
+      "Design personnalisé",
+      "Livraison en 14 jours",
       "Hébergement offert pendant 1 an"
     ]
   }
@@ -91,11 +72,11 @@ export default function ServicesSection() {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl font-medium mb-4">Nos Services</h2>
           <p className="text-foreground/80 card-text">
-            Nous proposons une gamme complète de services pour vous aider à créer et développer votre présence en ligne.
+            Nous proposons deux solutions sur mesure pour vous aider à établir votre présence en ligne avec efficacité.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {services.map((service) => (
             <div 
               key={service.id} 
@@ -160,6 +141,15 @@ export default function ServicesSection() {
               )}
             </div>
           ))}
+        </div>
+        
+        <div className="flex justify-center mt-10">
+          <div className="flex items-center gap-2 text-sm text-primary/90 border border-primary/30 rounded-full px-4 py-2 bg-primary/5 shadow-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-5 h-5">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
+            </svg>
+            <span className="font-medium">Possibilité de paiement en 2x ou 3x sans frais pour tous nos services</span>
+          </div>
         </div>
       </div>
     </section>

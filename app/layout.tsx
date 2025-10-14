@@ -9,8 +9,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Agence Web - Design & Développement",
-  description: "Agence web spécialisée en design et développement de sites web modernes et élégants",
+  title: "DevExpress - Design & Développement",
+  description: "DevExpress, agence web spécialisée en design et développement de sites web modernes et élégants",
 };
 
 export default function RootLayout({

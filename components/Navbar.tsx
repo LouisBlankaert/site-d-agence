@@ -63,6 +63,14 @@ export default function Navbar() {
             </li>
             <li>
               <Link
+                href="/notre-histoire"
+                className="text-sm text-foreground/80 hover:text-primary transition-colors"
+              >
+                Notre Histoire
+              </Link>
+            </li>
+            <li>
+              <Link
                 href="#contact"
                 className="apple-button text-sm"
               >
@@ -139,6 +147,15 @@ export default function Navbar() {
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Portfolio
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/notre-histoire"
+                  className="block py-2 text-sm text-foreground/80 hover:text-primary"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Notre Histoire
                 </Link>
               </li>
               <li>

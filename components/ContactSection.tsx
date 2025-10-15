@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { sendEmail } from "../lib/email";
 
 // Styles pour les animations des éléments de contact
 const styles = `
@@ -222,6 +223,7 @@ export default function ContactSection() {
     subject: "",
     message: ""
   });
+  const [submitError, setSubmitError] = useState("");
 
   // Vérifier si un service a été sélectionné via l'URL ou l'événement personnalisé
   useEffect(() => {
@@ -275,33 +277,48 @@ export default function ContactSection() {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
-  // const [submitError, setSubmitError] = useState("");
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setSubmitError("");
     
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setSubmitSuccess(true);
-      setFormData({
-        name: "",
-        email: "",
-        subject: "",
-        message: ""
+    try {
+      // Envoyer l'email via notre fonction personnalisée
+      const result = await sendEmail({
+        name: formData.name,
+        email: formData.email,
+        subject: formData.subject,
+        message: formData.message
       });
       
-      // Reset success message after 5 seconds
-      setTimeout(() => {
-        setSubmitSuccess(false);
-      }, 5000);
-    }, 1500);
+      if (result.success) {
+        setIsSubmitting(false);
+        setSubmitSuccess(true);
+        setFormData({
+          name: "",
+          email: "",
+          subject: "",
+          message: ""
+        });
+        
+        // Reset success message after 5 seconds
+        setTimeout(() => {
+          setSubmitSuccess(false);
+        }, 5000);
+      } else {
+        throw new Error(result.message);
+      }
+    } catch (error: unknown) {
+      console.error('Erreur lors de l\'envoi de l\'email:', error);
+      setIsSubmitting(false);
+      setSubmitError("Une erreur est survenue lors de l'envoi du message. Veuillez réessayer plus tard.");
+    }
   };
 
   return (
@@ -361,7 +378,11 @@ export default function ContactSection() {
               </div>
             ) : null}
             
-            {/* Message d'erreur désactivé pour le moment */}
+            {submitError ? (
+              <div className="bg-red-50 text-red-800 p-3 rounded-lg mb-5 text-sm">
+                {submitError}
+              </div>
+            ) : null}
             
             <form onSubmit={handleSubmit} className="space-y-3 contact-form">
               <div>

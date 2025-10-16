@@ -1,35 +1,31 @@
-// import Image from "next/image";
+import Image from "next/image";
 import Link from "next/link";
 
 const portfolioItems = [
   {
     id: 1,
-    title: "E-commerce Mode",
-    description: "Site e-commerce pour une marque de vêtements avec une interface élégante et intuitive.",
-    image: "/portfolio-1.jpg",
-    tags: ["E-commerce", "React", "Stripe"]
+    title: "Autogate",
+    description: "Site web de voitures, pour mettre les acheteurs en contact avec les vendeurs.",
+    image: "/portfolio-agence.jpg",
+    tags: ["Next.js", "TailwindCSS", "React"],
+    link: "https://site-voiture-drab.vercel.app/"
   },
   {
     id: 2,
-    title: "Application SaaS",
-    description: "Plateforme SaaS de gestion de projets avec tableau de bord personnalisé.",
-    image: "/portfolio-2.jpg",
-    tags: ["SaaS", "Next.js", "Dashboard"]
+    title: "Portfolio",
+    description: "Portfolio web d'un developpeur.",
+    image: "/portfolio-tasks.jpg",
+    tags: ["Next.js", "TailwindCSS", "React"],
+    link: "https://www.louisblankaert.com/"
   },
   {
     id: 3,
-    title: "Site Vitrine Restaurant",
-    description: "Site vitrine pour un restaurant gastronomique avec réservation en ligne.",
-    image: "/portfolio-3.jpg",
-    tags: ["Vitrine", "Réservation", "WordPress"]
+    title: "Pimmo",
+    description: "Site pour les locations d'appartements.",
+    image: "/portfolio-agence.jpg",
+    tags: ["Next.js", "TailwindCSS", "React"],
+    link: "https://pimmo.vercel.app/"
   },
-  {
-    id: 4,
-    title: "Application Mobile",
-    description: "Application mobile de livraison de repas avec interface utilisateur intuitive.",
-    image: "/portfolio-4.jpg",
-    tags: ["Mobile", "React Native", "API"]
-  }
 ];
 
 export default function PortfolioSection() {
@@ -43,18 +39,26 @@ export default function PortfolioSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
           {portfolioItems.map((item) => (
             <div 
               key={item.id} 
               className="group relative bg-secondary rounded-2xl overflow-hidden transition-all hover:shadow-lg card"
             >
-              <div className="relative w-full aspect-[16/9] bg-muted">
-                {/* Placeholder for image - in a real project, you would use actual images */}
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/50 flex items-center justify-center">
-                  <span className="text-xl font-medium">{item.title}</span>
+              <Link href={item.link} target="_blank" rel="noopener noreferrer">
+                <div className="relative w-full aspect-[16/9] bg-muted group-hover:opacity-90 transition-opacity cursor-pointer">
+                  {/* Utiliser Image pour les images réelles ou un placeholder si l'image n'est pas disponible */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/50 flex items-center justify-center z-10">
+                    <span className="text-xl font-medium">{item.title}</span>
+                  </div>
+                  <Image 
+                    src={item.image} 
+                    alt={item.title} 
+                    fill 
+                    className="object-cover" 
+                  />
                 </div>
-              </div>
+              </Link>
               
               <div className="p-6">
                 <h3 className="card-title mb-2">{item.title}</h3>
@@ -72,10 +76,12 @@ export default function PortfolioSection() {
                 </div>
                 
                 <Link 
-                  href="#" 
+                  href={item.link} 
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center text-primary font-medium text-sm"
                 >
-                  Voir le projet
+                  {item.title}
                   <svg 
                     xmlns="http://www.w3.org/2000/svg" 
                     viewBox="0 0 20 20" 

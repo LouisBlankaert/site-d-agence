@@ -16,7 +16,7 @@ export default function NotreHistoire() {
               <div className="relative overflow-hidden rounded-2xl mb-12 bg-gradient-to-br from-primary/10 to-secondary/10 p-6 md:p-8 shadow-lg border border-primary/20">
                 <div className={`absolute top-0 left-0 w-full h-full ${styles.bgGridPattern} opacity-5`}></div>
                 <blockquote className="relative z-10 italic text-lg md:text-xl text-foreground/90 border-l-4 border-primary pl-4">
-                  "Le développement web était comme une étoile lointaine qui m&apos;attirait depuis longtemps. En 2022, j&apos;ai enfin osé m&apos;y aventurer, et ce fut comme une révélation. Dans chaque ligne de code, j&apos;ai découvert un langage universel capable de transformer des idées abstraites en expériences tangibles. Aujourd&apos;hui, cette passion guide chacun de mes projets, tel un artisan qui façonne le numérique avec précision et créativité."
+                  &quot;Le développement web était comme une étoile lointaine qui m&apos;attirait depuis longtemps. En 2022, j&apos;ai enfin osé m&apos;y aventurer, et ce fut comme une révélation. Dans chaque ligne de code, j&apos;ai découvert un langage universel capable de transformer des idées abstraites en expériences tangibles. Aujourd&apos;hui, cette passion guide chacun de mes projets, tel un artisan qui façonne le numérique avec précision et créativité.&quot;
                 </blockquote>
                 <p className="text-right mt-4 text-sm text-foreground/70">— Fondateur de DevExpress</p>
               </div>

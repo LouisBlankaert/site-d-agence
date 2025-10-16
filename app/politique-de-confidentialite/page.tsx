@@ -25,7 +25,7 @@ export default function PolitiqueDeConfidentialite() {
               
               <h2 className="text-2xl font-medium mt-8 mb-4">2. Données collectées</h2>
               <p>
-                Nous pouvons collecter les types d'informations suivants :
+                Nous pouvons collecter les types d&apos;informations suivants :
               </p>
               <ul className="list-disc pl-6 mb-6">
                 <li className="mb-2">
@@ -60,7 +60,7 @@ export default function PolitiqueDeConfidentialite() {
                 Nous mettons en œuvre des mesures de sécurité appropriées pour protéger vos données 
                 personnelles contre tout accès, altération, divulgation ou destruction non autorisés. 
                 Cependant, aucune méthode de transmission sur Internet ou de stockage électronique 
-                n'est totalement sécurisée, et nous ne pouvons garantir une sécurité absolue.
+                n&apos;est totalement sécurisée, et nous ne pouvons garantir une sécurité absolue.
               </p>
               
               <h2 className="text-2xl font-medium mt-8 mb-4">5. Partage des données</h2>
@@ -70,7 +70,7 @@ export default function PolitiqueDeConfidentialite() {
               </p>
               <ul className="list-disc pl-6 mb-6">
                 <li className="mb-2">Des prestataires de services qui nous aident à exploiter notre site web</li>
-                <li className="mb-2">Des autorités publiques lorsque la loi l'exige</li>
+                <li className="mb-2">Des autorités publiques lorsque la loi l&apos;exige</li>
               </ul>
               
               <h2 className="text-2xl font-medium mt-8 mb-4">6. Vos droits</h2>
@@ -78,15 +78,15 @@ export default function PolitiqueDeConfidentialite() {
                 Conformément au Règlement Général sur la Protection des Données (RGPD), vous disposez des droits suivants :
               </p>
               <ul className="list-disc pl-6 mb-6">
-                <li className="mb-2">Droit d'accès à vos données personnelles</li>
+                <li className="mb-2">Droit d&apos;accès à vos données personnelles</li>
                 <li className="mb-2">Droit de rectification de vos données</li>
-                <li className="mb-2">Droit à l'effacement de vos données</li>
+                <li className="mb-2">Droit à l&apos;effacement de vos données</li>
                 <li className="mb-2">Droit à la limitation du traitement</li>
                 <li className="mb-2">Droit à la portabilité des données</li>
-                <li className="mb-2">Droit d'opposition au traitement</li>
+                <li className="mb-2">Droit d&apos;opposition au traitement</li>
               </ul>
               <p>
-                Pour exercer ces droits, veuillez nous contacter à l'adresse e-mail suivante : 
+                Pour exercer ces droits, veuillez nous contacter à l&apos;adresse e-mail suivante : 
                 <a href="mailto:devexpress1@hotmail.com" className="text-primary hover:underline"> devexpress1@hotmail.com</a>
               </p>
               
@@ -99,7 +99,7 @@ export default function PolitiqueDeConfidentialite() {
               <h2 className="text-2xl font-medium mt-8 mb-4">8. Contact</h2>
               <p>
                 Si vous avez des questions concernant cette politique de confidentialité, 
-                veuillez nous contacter à l'adresse suivante :
+                veuillez nous contacter à l&apos;adresse suivante :
               </p>
               <p>
                 <strong>DevExpress</strong><br />
@@ -125,7 +125,7 @@ export default function PolitiqueDeConfidentialite() {
                     clipRule="evenodd" 
                   />
                 </svg>
-                Retour à l'accueil
+                Retour à l&apos;accueil
               </Link>
             </div>
           </div>

@@ -6,7 +6,7 @@ const portfolioItems = [
     id: 1,
     title: "Autogate",
     description: "Site web de voitures, pour mettre les acheteurs en contact avec les vendeurs.",
-    image: "/portfolio-agence.jpg",
+    image: "/images/image_autogate.png", // Utilisez le nom de votre image existante
     tags: ["Next.js", "TailwindCSS", "React"],
     link: "https://site-voiture-drab.vercel.app/"
   },
@@ -14,7 +14,7 @@ const portfolioItems = [
     id: 2,
     title: "Portfolio",
     description: "Portfolio web d'un developpeur.",
-    image: "/portfolio-tasks.jpg",
+    image: "/images/image_portfolio.png",
     tags: ["Next.js", "TailwindCSS", "React"],
     link: "https://www.louisblankaert.com/"
   },
@@ -22,7 +22,7 @@ const portfolioItems = [
     id: 3,
     title: "Pimmo",
     description: "Site pour les locations d'appartements.",
-    image: "/portfolio-agence.jpg",
+    image: "/images/image_pimmo.png",
     tags: ["Next.js", "TailwindCSS", "React"],
     link: "https://pimmo.vercel.app/"
   },
@@ -46,17 +46,22 @@ export default function PortfolioSection() {
               className="group relative bg-secondary rounded-2xl overflow-hidden transition-all hover:shadow-lg card"
             >
               <Link href={item.link} target="_blank" rel="noopener noreferrer">
-                <div className="relative w-full aspect-[16/9] bg-muted group-hover:opacity-90 transition-opacity cursor-pointer">
-                  {/* Utiliser Image pour les images réelles ou un placeholder si l'image n'est pas disponible */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/50 flex items-center justify-center z-10">
-                    <span className="text-xl font-medium">{item.title}</span>
-                  </div>
+                <div className="relative w-full aspect-[16/9] bg-muted group-hover:opacity-95 transition-all duration-300 cursor-pointer overflow-hidden rounded-t-xl">
+                  {/* Image principale avec effet de zoom au survol */}
                   <Image 
                     src={item.image} 
-                    alt={item.title} 
+                    alt={`Capture d'écran du projet ${item.title}`} 
                     fill 
-                    className="object-cover" 
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    quality={90}
+                    priority={item.id === 1} // Charger en priorité la première image
+                    className="object-cover group-hover:scale-105 transition-transform duration-500" 
                   />
+                  
+                  {/* Overlay avec effet de gradient */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-start p-4">
+                    <span className="text-white font-medium text-lg">{item.title}</span>
+                  </div>
                 </div>
               </Link>
               
